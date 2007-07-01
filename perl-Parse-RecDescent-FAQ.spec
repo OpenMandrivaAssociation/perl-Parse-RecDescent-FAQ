@@ -2,8 +2,8 @@
 
 Summary:	Parse::RecDescent::FAQ - the official, authorized FAQ for Parse::RecDescent
 Name:		perl-%{real_name}
-Version:	5.00
-Release: %mkrel 2
+Version:	5.02
+Release: %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
