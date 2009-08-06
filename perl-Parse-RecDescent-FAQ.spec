@@ -1,23 +1,25 @@
-%define real_name Parse-RecDescent-FAQ
+%define upstream_name    Parse-RecDescent-FAQ
+%define upstream_version 6.0.f
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Parse::RecDescent::FAQ - the official, authorized FAQ for Parse::RecDescent
-Name:		perl-%{real_name}
-Version:	5.04
-Release:	%mkrel 4
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Parse/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Parse::RecDescent::FAQ - the official, authorized FAQ for
 Parse::RecDescent.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -38,4 +40,3 @@ rm -rf %{buildroot}
 %doc ChangeLog
 %{perl_vendorlib}/Parse/RecDescent/*
 %{_mandir}/*/*
-
