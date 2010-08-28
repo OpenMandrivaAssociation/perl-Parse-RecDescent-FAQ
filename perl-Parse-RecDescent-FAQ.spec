@@ -1,5 +1,5 @@
 %define upstream_name    Parse-RecDescent-FAQ
-%define upstream_version 7.4
+%define upstream_version 7.5
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
