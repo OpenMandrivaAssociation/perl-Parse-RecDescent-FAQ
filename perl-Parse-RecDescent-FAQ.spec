@@ -2,7 +2,7 @@
 %define upstream_version 7.5
 Name:		perl-%{upstream_name}
 Version:	7.5
-Release:	3
+Release:	4
 
 Summary:	Parse::RecDescent::FAQ - the official, authorized FAQ for Parse::RecDescent
 License:	GPL+ or Artistic
